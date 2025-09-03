@@ -38,26 +38,26 @@ export function PerformanceMetrics({ contractor }: PerformanceMetricsProps) {
       <div className="space-y-3">
         <div className="flex justify-between items-center">
           <span className="text-sm font-medium text-gray-700">Financial</span>
-          <span className={`px-2 py-1 rounded-full text-xs font-medium ${ragColors[contractor.ragFinancial]}`}>
-            {contractor.ragFinancial.toUpperCase()}
+          <span className={`px-2 py-1 rounded-full text-xs font-medium ${ragColors[contractor.ragFinancial || 'amber']}`}>
+            {(contractor.ragFinancial || 'amber').toUpperCase()}
           </span>
         </div>
         <div className="flex justify-between items-center">
           <span className="text-sm font-medium text-gray-700">Compliance</span>
-          <span className={`px-2 py-1 rounded-full text-xs font-medium ${ragColors[contractor.ragCompliance]}`}>
-            {contractor.ragCompliance.toUpperCase()}
+          <span className={`px-2 py-1 rounded-full text-xs font-medium ${ragColors[contractor.ragCompliance || 'amber']}`}>
+            {(contractor.ragCompliance || 'amber').toUpperCase()}
           </span>
         </div>
         <div className="flex justify-between items-center">
           <span className="text-sm font-medium text-gray-700">Performance</span>
-          <span className={`px-2 py-1 rounded-full text-xs font-medium ${ragColors[contractor.ragPerformance]}`}>
-            {contractor.ragPerformance.toUpperCase()}
+          <span className={`px-2 py-1 rounded-full text-xs font-medium ${ragColors[contractor.ragPerformance || 'amber']}`}>
+            {(contractor.ragPerformance || 'amber').toUpperCase()}
           </span>
         </div>
         <div className="flex justify-between items-center">
           <span className="text-sm font-medium text-gray-700">Safety</span>
-          <span className={`px-2 py-1 rounded-full text-xs font-medium ${ragColors[contractor.ragSafety]}`}>
-            {contractor.ragSafety.toUpperCase()}
+          <span className={`px-2 py-1 rounded-full text-xs font-medium ${ragColors[contractor.ragSafety || 'amber']}`}>
+            {(contractor.ragSafety || 'amber').toUpperCase()}
           </span>
         </div>
       </div>

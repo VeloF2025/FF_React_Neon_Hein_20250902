@@ -48,8 +48,8 @@ interface Project {
 
 async function handleResponse<T>(response: Response): Promise<T> {
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ message: 'Request failed' }));
-    throw new Error(error.message || `HTTP ${response.status}`);
+    const error = await response.json().catch(() => ({ error: 'Request failed' }));
+    throw new Error(error.error || error.message || `HTTP ${response.status}`);
   }
   
   const data = await response.json();
@@ -107,7 +107,7 @@ export const projectApiService = {
   },
 
   async getById(id: string): Promise<Project | null> {
-    const response = await fetch(`${API_BASE}/projects?id=${id}`);
+    const response = await fetch(`${API_BASE}/projects/${id}`);
     const dbProject = await handleResponse<DbProject | null>(response);
     return dbProject ? transformDbToProject(dbProject) : null;
   },
@@ -125,7 +125,7 @@ export const projectApiService = {
 
   async update(id: string, updates: Partial<Project>): Promise<Project> {
     const dbUpdates = transformProjectToDb(updates);
-    const response = await fetch(`${API_BASE}/projects?id=${id}`, {
+    const response = await fetch(`${API_BASE}/projects/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(dbUpdates)
@@ -135,7 +135,7 @@ export const projectApiService = {
   },
 
   async delete(id: string): Promise<{ success: boolean; message: string }> {
-    const response = await fetch(`${API_BASE}/projects?id=${id}`, {
+    const response = await fetch(`${API_BASE}/projects/${id}`, {
       method: 'DELETE'
     });
     return handleResponse<{ success: boolean; message: string }>(response);

@@ -75,7 +75,7 @@ class ContractorImportService {
         fileType: file.type
       } }, 'contractorImportService');
       
-      // Re-throw error instead of falling back to mock data;
+      // Re-throw error instead of falling back to mock data
       throw error;
       
       // Fallback to mock data if processing fails - DISABLED FOR DEBUGGING
@@ -232,7 +232,7 @@ const text = await file.text();
   private async parseExcelFile(file: File, options: ContractorImportOptions): Promise<Partial<ContractorImportRow>[]> {
     log.info('📊 Excel Parsing Debug - Starting:', { data: { fileName: file.name, fileSize: file.size } }, 'contractorImportService');
     try {
-      // Dynamically import XLSX to avoid bundle issues;
+      // Dynamically import XLSX to avoid bundle issues
       const XLSX = await import('xlsx');
       
       // Read file as array buffer
@@ -241,7 +241,7 @@ const text = await file.text();
       // Parse workbook
       const workbook = XLSX.read(buffer, { type: 'array' });
       log.info('📋 Excel Workbook:', { data: { sheetNames: workbook.SheetNames } }, 'contractorImportService');
-      // Get first sheet;
+      // Get first sheet
       const firstSheetName = workbook.SheetNames[0];
       const worksheet = workbook.Sheets[firstSheetName];
       
@@ -471,7 +471,7 @@ const text = await file.text();
     }
 
     // Remove all non-digit characters except +
-    let cleaned = value.replace(/[^\d+]/g, '');
+    const cleaned = value.replace(/[^\d+]/g, '');
     
     // Handle different input formats
     if (cleaned.startsWith('+27')) {

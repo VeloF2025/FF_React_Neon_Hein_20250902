@@ -96,7 +96,10 @@ export class ProjectDataMapper {
   static isOverdue(project: Project): boolean {
     if (!project.endDate) return false;
     
-    const endDate = new Date(project.endDate.toString());
+    // Safe date conversion with null/undefined check
+    const endDate = project.endDate instanceof Date 
+      ? project.endDate 
+      : project.endDate ? new Date(project.endDate.toString()) : new Date();
     const now = new Date();
     
     return endDate < now && project.status !== 'completed';
@@ -108,8 +111,13 @@ export class ProjectDataMapper {
   static calculateDuration(project: Project): number | null {
     if (!project.startDate || !project.endDate) return null;
     
-    const start = new Date(project.startDate.toString());
-    const end = new Date(project.endDate.toString());
+    // Safe date conversion with null/undefined checks
+    const start = project.startDate instanceof Date 
+      ? project.startDate 
+      : project.startDate ? new Date(project.startDate.toString()) : new Date();
+    const end = project.endDate instanceof Date 
+      ? project.endDate 
+      : project.endDate ? new Date(project.endDate.toString()) : new Date();
     
     const diffTime = Math.abs(end.getTime() - start.getTime());
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
@@ -123,7 +131,10 @@ export class ProjectDataMapper {
   static calculateRemainingDays(project: Project): number | null {
     if (!project.endDate) return null;
     
-    const endDate = new Date(project.endDate.toString());
+    // Safe date conversion with null/undefined check
+    const endDate = project.endDate instanceof Date 
+      ? project.endDate 
+      : project.endDate ? new Date(project.endDate.toString()) : new Date();
     const now = new Date();
     
     const diffTime = endDate.getTime() - now.getTime();
@@ -193,8 +204,13 @@ export class ProjectDataMapper {
     }
     
     if (project.startDate && project.endDate) {
-      const start = new Date(project.startDate.toString());
-      const end = new Date(project.endDate.toString());
+      // Safe date conversion with null/undefined checks
+      const start = project.startDate instanceof Date 
+        ? project.startDate 
+        : project.startDate ? new Date(project.startDate.toString()) : new Date();
+      const end = project.endDate instanceof Date 
+        ? project.endDate 
+        : project.endDate ? new Date(project.endDate.toString()) : new Date();
       
       if (start > end) {
         errors.push('Start date must be before end date');

@@ -60,7 +60,9 @@ function mapProjectToDisplay(project: Project): DisplayProject {
     if (!date) return new Date().toISOString();
     if (typeof date === 'string') return date;
     if (date.toDate && typeof date.toDate === 'function') return date.toDate().toISOString();
-    return date.toString();
+    if (date instanceof Date) return date.toISOString();
+    // Safe toString() call with null check
+    return date && typeof date.toString === 'function' ? date.toString() : new Date().toISOString();
   };
 
   return {

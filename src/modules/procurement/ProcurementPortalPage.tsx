@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import type { Project } from '@/types/project.types';
-import { ProjectType, ProjectStatus, Priority } from '@/types/project.types';
+import { ProjectType, ProjectStatus, ProjectPriority } from '@/types/project.types';
 import { AlertCircle } from 'lucide-react';
 import { ProcurementTabs } from './components/ProcurementTabs';
 import { ProjectFilter } from './components/ProjectFilter';
@@ -39,7 +39,7 @@ export function ProcurementPortalPage({ children }: ProcurementPortalPageProps) 
         startDate: new Date().toISOString(),
         endDate: new Date().toISOString(),
         status: ProjectStatus.ACTIVE,
-        priority: Priority.MEDIUM,
+        priority: ProjectPriority.MEDIUM,
         plannedProgress: 0,
         actualProgress: 0,
         createdBy: 'system',
@@ -347,7 +347,7 @@ export function ProcurementPortalPage({ children }: ProcurementPortalPageProps) 
                         projectType: ProjectType.FIBRE,
                         startDate: new Date(),
                         endDate: new Date(),
-                        priority: Priority.MEDIUM,
+                        priority: ProjectPriority.MEDIUM,
                         clientId: '',
                         plannedProgress: 0,
                         actualProgress: 0,

@@ -31,7 +31,7 @@ export function ProjectScheduleBudget({
             </label>
             <input
               type="date"
-              value={formData.startDate.split('T')[0]}
+              value={(formData.startDate || '').split('T')[0]}
               onChange={(e) => onInputChange('startDate', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               required
@@ -44,7 +44,7 @@ export function ProjectScheduleBudget({
             </label>
             <input
               type="date"
-              value={formData.endDate.split('T')[0]}
+              value={(formData.endDate || '').split('T')[0]}
               onChange={(e) => onInputChange('endDate', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               required
@@ -57,7 +57,7 @@ export function ProjectScheduleBudget({
             </label>
             <input
               type="number"
-              value={formData.budget}
+              value={formData.budget || 0}
               onChange={(e) => onInputChange('budget', parseFloat(e.target.value) || 0)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="0.00"
@@ -71,9 +71,9 @@ export function ProjectScheduleBudget({
               Project Manager *
             </label>
             <select
-              value={formData.projectManagerId}
+              value={formData.projectManagerId || ''}
               onChange={(e) => onInputChange('projectManagerId', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 disabled:bg-gray-50 disabled:text-gray-500"
               required
               disabled={isManagersLoading}
             >

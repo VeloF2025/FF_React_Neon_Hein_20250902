@@ -1,12 +1,67 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="12.483307">
-<testsuite name="quick-visual-comparison.spec.ts" timestamp="2025-08-27T08:06:22.052Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.658" errors="0">
-<testcase name="Quick Visual Comparison - Desktop" classname="quick-visual-comparison.spec.ts" time="8.658">
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="24.300858999999996">
+<testsuite name="project-crud-workflow.spec.ts" timestamp="2025-09-02T19:53:03.325Z" hostname="chromium" tests="1" failures="1" skipped="0" time="21.48" errors="0">
+<testcase name="Project CRUD Workflow › Complete project CRUD lifecycle with data consistency verification" classname="project-crud-workflow.spec.ts" time="21.48">
+<failure message="project-crud-workflow.spec.ts:44:3 Complete project CRUD lifecycle with data consistency verification" type="FAILURE">
+<![CDATA[  [chromium] › project-crud-workflow.spec.ts:44:3 › Project CRUD Workflow › Complete project CRUD lifecycle with data consistency verification › Fill project creation form with test data 
+
+    Test timeout of 20000ms exceeded.
+
+    Error: page.fill: Test timeout of 20000ms exceeded.
+    Call log:
+      - waiting for locator('input[name="endDate"]')
+        - locator resolved to <input readonly type="date" name="endDate" title="This is automatically calculated based on start date and duration" class="w-full px-3 py-2 border border-gray-200 rounded-md bg-gray-50 cursor-not-allowed"/>
+        - fill("2025-12-31")
+      - attempting fill action
+        2 × waiting for element to be visible, enabled and editable
+          - element is not editable
+        - retrying fill action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and editable
+          - element is not editable
+        - retrying fill action
+          - waiting 100ms
+        29 × waiting for element to be visible, enabled and editable
+           - element is not editable
+         - retrying fill action
+           - waiting 500ms
+
+
+      120 |         for (const selector of selectors) {
+      121 |           if (await page.locator(selector).count() > 0) {
+    > 122 |             await page.fill(selector, testValue);
+          |                        ^
+      123 |             filledFields[fieldKey] = testValue;
+      124 |             console.log(`   ✅ Filled ${fieldKey}: ${testValue}`);
+      125 |             fieldFilled = true;
+        at C:\Jarvis\AI Workspace\FF_React_Neon\dev-tools\testing\tests\e2e\project-crud-workflow.spec.ts:122:24
+        at C:\Jarvis\AI Workspace\FF_React_Neon\dev-tools\testing\tests\e2e\project-crud-workflow.spec.ts:102:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\project-crud-workflow-Proj-8f10d-ta-consistency-verification-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\project-crud-workflow-Proj-8f10d-ta-consistency-verification-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\project-crud-workflow-Proj-8f10d-ta-consistency-verification-chromium\error-context.md
+]]>
+</failure>
 <system-out>
-<![CDATA[🔍 Navigating to Development Environment...
-🔍 Navigating to Production Environment...
-📸 Capturing Development Screenshot...
-📸 Capturing Production Screenshot...
-✅ Screenshots captured successfully
+<![CDATA[🚀 Starting Complete Project CRUD Workflow Test
+[33mNaN[39m
+1. Looking for project creation option...
+   ✅ Found direct navigation: button:has-text("New Project")
+2. Filling project creation form...
+   ✅ Filled name: Fiber Network Expansion Test
+   ✅ Filled description: Test project for CRUD verification
+   ✅ Filled startDate: 2025-01-01
+
+[[ATTACHMENT|project-crud-workflow-Proj-8f10d-ta-consistency-verification-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|project-crud-workflow-Proj-8f10d-ta-consistency-verification-chromium\video.webm]]
+
+[[ATTACHMENT|project-crud-workflow-Proj-8f10d-ta-consistency-verification-chromium\error-context.md]]
 ]]>
 </system-out>
 </testcase>

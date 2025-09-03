@@ -46,7 +46,7 @@ export const contractorDocumentService = {
   async getByContractor(contractorId: string): Promise<ContractorDocument[]> {
     try {
       // Try the optimized query first (requires composite index)
-      let q = query(
+      const q = query(
         collection(db, 'contractor_documents'),
         where('contractorId', '==', contractorId),
         orderBy('documentType', 'asc'),

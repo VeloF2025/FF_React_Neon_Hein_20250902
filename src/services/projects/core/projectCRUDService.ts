@@ -35,7 +35,6 @@ export class ProjectCRUDService {
    * Hard delete a project (permanent removal)
    */
   static async hardDeleteProject(id: string): Promise<void> {
-    // Use the same delete endpoint - the API can decide whether to soft or hard delete
     return projectApi.deleteProject(id);
   }
 

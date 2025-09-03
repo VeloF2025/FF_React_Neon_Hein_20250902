@@ -182,7 +182,7 @@ export const projectApi = {
    */
   async updateProject(id: string, data: Partial<ProjectFormData>): Promise<void> {
     try {
-      const response = await fetch(`${API_BASE}/projects?id=${id}`, {
+      const response = await fetch(`${API_BASE}/projects/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -217,7 +217,7 @@ export const projectApi = {
    */
   async deleteProject(id: string): Promise<void> {
     try {
-      const response = await fetch(`${API_BASE}/projects?id=${id}`, {
+      const response = await fetch(`${API_BASE}/projects/${id}`, {
         method: 'DELETE',
       });
 
@@ -235,7 +235,7 @@ export const projectApi = {
    */
   async updateProjectStatus(id: string, status: string): Promise<void> {
     try {
-      const response = await fetch(`${API_BASE}/projects?id=${id}`, {
+      const response = await fetch(`${API_BASE}/projects/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -257,7 +257,7 @@ export const projectApi = {
    */
   async updateProjectProgress(id: string, progress: number): Promise<void> {
     try {
-      const response = await fetch(`${API_BASE}/projects?id=${id}`, {
+      const response = await fetch(`${API_BASE}/projects/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -279,7 +279,7 @@ export const projectApi = {
    */
   async updateProjectBudget(id: string, budget: number): Promise<void> {
     try {
-      const response = await fetch(`${API_BASE}/projects?id=${id}`, {
+      const response = await fetch(`${API_BASE}/projects/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -301,7 +301,7 @@ export const projectApi = {
    */
   async assignProjectToClient(projectId: string, clientId: string): Promise<void> {
     try {
-      const response = await fetch(`${API_BASE}/projects?id=${projectId}`, {
+      const response = await fetch(`${API_BASE}/projects/${projectId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -327,7 +327,7 @@ export const projectApi = {
     endDate?: Date | null
   ): Promise<void> {
     try {
-      const response = await fetch(`${API_BASE}/projects?id=${id}`, {
+      const response = await fetch(`${API_BASE}/projects/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

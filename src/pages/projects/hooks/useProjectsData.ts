@@ -4,7 +4,7 @@
  */
 
 import { useMemo } from 'react';
-import { ProjectStatus, Priority } from '@/types/project.types';
+import { ProjectStatus, ProjectPriority } from '@/types/project.types';
 import { useProjects, useDeleteProject, useProjectFilters } from '@/hooks/useProjects';
 import { ProjectSummaryCard } from '../types';
 import { ProjectFilter } from '@/types/project/form.types';
@@ -46,7 +46,7 @@ export function useProjectsData(filter?: ProjectFilter) {
     },
     {
       title: 'Critical Priority',
-      value: projects.filter(p => p.priority === Priority.CRITICAL).length,
+      value: projects.filter(p => p.priority === ProjectPriority.CRITICAL).length,
       icon: AlertCircle,
       color: 'red' as const,
       trend: { value: 2, isPositive: false }

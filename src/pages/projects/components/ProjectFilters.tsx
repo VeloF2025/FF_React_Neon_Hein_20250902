@@ -4,7 +4,7 @@
  */
 
 import { ProjectFiltersProps } from '../types';
-import { ProjectStatus, ProjectType, Priority } from '@/types/project.types';
+import { ProjectStatus, ProjectType, ProjectPriority } from '@/types/project.types';
 
 export function ProjectFilters({
   filter,
@@ -73,11 +73,11 @@ export function ProjectFilters({
             multiple
             value={filter.priority || []}
             onChange={(e) => onUpdateFilter({ 
-              priority: Array.from(e.target.selectedOptions, option => option.value) as Priority[]
+              priority: Array.from(e.target.selectedOptions, option => option.value) as ProjectPriority[]
             })}
             className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            {Object.values(Priority).map(priority => (
+            {Object.values(ProjectPriority).map(priority => (
               <option key={priority} value={priority}>
                 {priority ? priority.charAt(0).toUpperCase() + priority.slice(1) : ''}
               </option>

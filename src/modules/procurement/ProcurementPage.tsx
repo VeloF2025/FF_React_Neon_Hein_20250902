@@ -22,7 +22,7 @@ import type {
   ProjectSummary
 } from '@/types/procurement/portal.types';
 import type { Project } from '@/types/project.types';
-import { ProjectType, ProjectStatus, Priority } from '@/types/project.types';
+import { ProjectType, ProjectStatus, ProjectPriority } from '@/types/project.types';
 import { log } from '@/lib/logger';
 
 export function ProcurementPage() {
@@ -40,7 +40,7 @@ export function ProcurementPage() {
       startDate: new Date().toISOString(),
       endDate: new Date().toISOString(),
       status: ProjectStatus.ACTIVE,
-      priority: Priority.MEDIUM,
+      priority: ProjectPriority.MEDIUM,
       plannedProgress: 0,
       actualProgress: 0,
       createdBy: 'system',

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { sql } from '@/lib/neon';
+import { clientsApi } from '@/services/api/apiClient';
 
 interface Client {
   id: string;
@@ -17,13 +17,8 @@ export function ClientsDebug() {
   useEffect(() => {
     async function fetchClients() {
       try {
-        // Direct SQL query to test connection
-        const result = await sql`
-          SELECT * FROM clients
-          ORDER BY name ASC
-          LIMIT 10
-        `;
-        
+        // Use API endpoint instead of direct database access
+        const result = await clientsApi.getAll();
         setClients(result as Client[]);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
@@ -35,12 +30,12 @@ export function ClientsDebug() {
     fetchClients();
   }, []);
 
-  if (loading) return <div>Loading clients from Neon...</div>;
+  if (loading) return <div>Loading clients via API...</div>;
   if (error) return <div className="text-red-600">Error: {error}</div>;
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">Clients Debug (Neon Database)</h2>
+      <h2 className="text-xl font-bold mb-4">Clients Debug (via API)</h2>
       <p className="mb-2">Total clients found: {clients.length}</p>
       
       {clients.length === 0 ? (

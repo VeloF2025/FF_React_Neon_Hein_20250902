@@ -23,7 +23,7 @@ export function ProjectBasicInfo({ formData, onInputChange }: ProjectBasicInfoPr
             </label>
             <input
               type="text"
-              value={formData.code}
+              value={formData.code || ''}
               onChange={(e) => onInputChange('code', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="e.g., LAW-001"
@@ -37,7 +37,7 @@ export function ProjectBasicInfo({ formData, onInputChange }: ProjectBasicInfoPr
             </label>
             <input
               type="text"
-              value={formData.name}
+              value={formData.name || ''}
               onChange={(e) => onInputChange('name', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="e.g., Lawley Fiber Installation"
@@ -50,7 +50,7 @@ export function ProjectBasicInfo({ formData, onInputChange }: ProjectBasicInfoPr
               Description
             </label>
             <textarea
-              value={formData.description}
+              value={formData.description || ''}
               onChange={(e) => onInputChange('description', e.target.value)}
               rows={3}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -64,7 +64,7 @@ export function ProjectBasicInfo({ formData, onInputChange }: ProjectBasicInfoPr
             </label>
             <input
               type="text"
-              value={formData.location}
+              value={formData.location || ''}
               onChange={(e) => onInputChange('location', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="e.g., Lawley, Johannesburg"

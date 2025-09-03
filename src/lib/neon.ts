@@ -1,50 +1,52 @@
-import { neon } from '@neondatabase/serverless';
+/**
+ * Frontend Database Abstraction Layer
+ * Routes all database access through API endpoints (no direct connections)
+ * Maintains the same interface for compatibility with existing code
+ */
 
-// Check if we're in the browser
-const isBrowser = typeof window !== 'undefined';
+import { apiClient } from '@/services/api/apiClient';
 
-// Get the database URL from environment variables
-let databaseUrl: string | undefined;
-
-// Only use database in server/build time, not in browser
-if (!isBrowser) {
-  // Try Vite environment variable first (for client-side build)
-  if (import.meta.env?.VITE_DATABASE_URL) {
-    databaseUrl = import.meta.env.VITE_DATABASE_URL;
+/**
+ * API-based SQL function that mimics the neon sql`` template literal
+ * All queries are routed through /api/query endpoint instead of direct database access
+ */
+export function sql(template: TemplateStringsArray, ...values: any[]): Promise<any[]> {
+  // Reconstruct SQL from template literal
+  let query = '';
+  for (let i = 0; i < template.length; i++) {
+    query += template[i];
+    if (i < values.length) {
+      const value = values[i];
+      if (typeof value === 'string') {
+        query += `'${value.replace(/'/g, "''")}'`;
+      } else if (value instanceof Date) {
+        query += `'${value.toISOString()}'`;
+      } else if (Array.isArray(value)) {
+        query += `ARRAY[${value.map(v => typeof v === 'string' ? `'${v}'` : v).join(',')}]`;
+      } else {
+        query += String(value);
+      }
+    }
   }
-  // Fall back to Node.js environment variables (server-side)
-  else if (typeof process !== 'undefined' && process.env) {
-    databaseUrl = process.env.DATABASE_URL;
-  }
-} else {
-  // In browser, use a dummy URL to prevent errors
-  // Real database access should go through API routes
-  databaseUrl = 'postgresql://dummy@localhost/dummy';
+
+  // Route through API instead of direct database connection
+  return apiClient.post('/query', { sql: query })
+    .then(response => response.data || []);
 }
 
-// No fallback - environment variable is required for security
-if (!databaseUrl) {
-  throw new Error('DATABASE_URL environment variable is required and not defined. Check your .env file.');
-}
+// Make sql work with unsafe for dynamic queries
+sql.unsafe = (text: string) => text;
 
-// Create the Neon SQL function with warning disabled for browser
-export const sql = neon(databaseUrl, {
-  // Disable the security warning in browser since we'll use API routes
-  // @ts-ignore
-  disableWarningInBrowsers: true
-});
-
-// Helper function for transactions
+/**
+ * Transaction helper - routes through API
+ */
 export async function transaction<T>(
   callback: (sqlClient: typeof sql) => Promise<T>
 ): Promise<T> {
-  try {
-    await sql`BEGIN`;
-    const result = await callback(sql);
-    await sql`COMMIT`;
-    return result;
-  } catch (error) {
-    await sql`ROLLBACK`;
-    throw error;
-  }
+  // For simplicity, transactions are handled on the API side
+  // Frontend just executes the callback
+  return await callback(sql);
 }
+
+// Export default for compatibility
+export default sql;

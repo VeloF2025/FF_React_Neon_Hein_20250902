@@ -1,0 +1,239 @@
+{
+  "project_metadata": {
+    "project_id": "ff-react-neon",
+    "project_name": "FibreFlow React Neon Application",
+    "version": "2.0.0",
+    "last_updated": "2025-09-02T00:00:00Z",
+    "archon_integration": {
+      "status": "active",
+      "enabled_date": "2025-08-29",
+      "configuration_updated": "2025-09-02"
+    }
+  },
+
+  "development_environment": {
+    "type": "fork-based-development",
+    "description": "Dual environment setup with production-dev separation",
+    "repositories": {
+      "production": {
+        "name": "FF_React_Neon (Production)",
+        "url": "https://github.com/VelocityFibre/FF_React_Neon.git",
+        "branch": "master",
+        "protection_level": "protected",
+        "access": "read-only-from-dev",
+        "purpose": "Production releases and stable code"
+      },
+      "development": {
+        "name": "FF_React_Neon_Hein_20250902 (Development Fork)",
+        "url": "https://github.com/VeloF2025/FF_React_Neon_Hein_20250902",
+        "branch": "main",
+        "protection_level": "development-active",
+        "access": "full-development-access",
+        "purpose": "Active development and feature implementation"
+      }
+    },
+    "workflow": {
+      "development_flow": [
+        "1. All development work happens in fork (VeloF2025/FF_React_Neon_Hein_20250902)",
+        "2. Use development database (Neon child branch) for safe testing",
+        "3. Create feature branches in fork for specific features",
+        "4. Test thoroughly in development environment",
+        "5. Create PR from fork to production repo when ready",
+        "6. Production deployment only from main production repo"
+      ],
+      "branch_strategy": "fork-based-gitflow",
+      "merge_strategy": "pull-request-only"
+    }
+  },
+
+  "database_environment": {
+    "type": "neon-branching-strategy",
+    "description": "Safe development with database branching",
+    "databases": {
+      "production": {
+        "name": "Neon Main Branch (Production)",
+        "environment": "production",
+        "protection_level": "protected",
+        "access": "production-only",
+        "purpose": "Live application data"
+      },
+      "development": {
+        "name": "Neon Child Branch (Development)",
+        "connection_string": "postgresql://neondb_owner:npg_pv5qhPy6uZBj@ep-lively-wave-a1vj6l2o-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
+        "environment": "development",
+        "protection_level": "development-safe",
+        "access": "full-development-access",
+        "purpose": "Development and testing without affecting production data"
+      }
+    },
+    "safety_features": [
+      "Child branch isolation - changes don't affect production",
+      "Schema changes can be tested safely",
+      "Data migrations can be validated before production",
+      "Easy rollback to production state if needed"
+    ]
+  },
+
+  "archon_workflow_integration": {
+    "mandatory_checks": {
+      "before_development": [
+        "archon:manage_task(action='list', project_id='ff-react-neon', filter_by='status', filter_value='todo')",
+        "archon:perform_rag_query(query='[relevant feature/pattern]', match_count=5)",
+        "archon:search_code_examples(query='[implementation pattern]', match_count=3)"
+      ],
+      "during_development": [
+        "archon:manage_task(action='update', task_id='[current_task_id]', update_fields={'status': 'doing'})",
+        "archon:perform_rag_query(query='[specific technical question]')",
+        "archon:manage_task(action='create', project_id='ff-react-neon', title='[new requirement]')"
+      ],
+      "after_completion": [
+        "archon:manage_task(action='update', task_id='[task_id]', update_fields={'status': 'done'})",
+        "Document learnings in knowledge base for new patterns"
+      ]
+    },
+    "development_safety_protocols": {
+      "repository_validation": [
+        "Always verify working in development fork before making changes",
+        "Confirm development database connection before schema changes",
+        "Check git remote points to development fork (VeloF2025/FF_React_Neon_Hein_20250902)"
+      ],
+      "database_validation": [
+        "Verify development database connection before any database operations",
+        "Always use child branch for testing schema changes",
+        "Document any database changes for production migration planning"
+      ]
+    }
+  },
+
+  "project_technology_stack": {
+    "frontend": {
+      "framework": "React 18 with TypeScript",
+      "build_tool": "Vite",
+      "styling": "TailwindCSS with VF corporate theme",
+      "state_management": "React Context + Hooks",
+      "routing": "React Router v6"
+    },
+    "backend_integration": {
+      "database": "Neon PostgreSQL with Drizzle ORM",
+      "api_layer": "RESTful services with TypeScript",
+      "authentication": "JWT-based with role management",
+      "file_storage": "Local with cloud backup integration"
+    },
+    "development_tools": {
+      "testing": "Vitest + React Testing Library + Playwright E2E",
+      "linting": "ESLint + Prettier with TypeScript",
+      "quality_gates": "Zero TypeScript errors, 95%+ test coverage",
+      "ci_cd": "GitHub Actions with automated testing"
+    }
+  },
+
+  "development_best_practices": {
+    "repository_management": {
+      "fork_synchronization": [
+        "Regularly sync fork with upstream production repository",
+        "Keep development fork up-to-date with latest production changes",
+        "Use 'git remote add upstream https://github.com/VelocityFibre/FF_React_Neon.git'",
+        "Regular 'git fetch upstream && git merge upstream/master'"
+      ],
+      "branch_protection": [
+        "Never commit directly to main branch in fork",
+        "Always create feature branches for development work",
+        "Use descriptive branch names (feature/pole-tracker, fix/database-connection)",
+        "Clean up feature branches after merging"
+      ]
+    },
+    "database_safety": [
+      "Always test schema changes in development branch first",
+      "Document all database migrations for production deployment",
+      "Use transactions for complex data operations",
+      "Regular backups of development data for testing scenarios"
+    ],
+    "code_quality_enforcement": [
+      "Zero TypeScript compilation errors (mandatory)",
+      "Zero ESLint errors/warnings (mandatory)",
+      "Zero console.log statements in production code",
+      "95%+ test coverage for all new features",
+      "Playwright E2E tests for all UI interactions"
+    ]
+  },
+
+  "archon_knowledge_integration": {
+    "project_specific_patterns": [
+      "VelocityFibre corporate theme implementation",
+      "Neon database integration with Drizzle ORM",
+      "React component patterns for fiber management",
+      "TypeScript service layer architecture",
+      "SOW (Statement of Work) data management patterns"
+    ],
+    "reusable_components": [
+      "VF-themed UI components (buttons, forms, modals)",
+      "Data table components with pagination and filtering",
+      "File upload components with preview",
+      "Authentication wrappers and role-based access",
+      "Error boundary and loading state components"
+    ],
+    "development_lessons": [
+      "Dual environment setup reduces production risk",
+      "Database branching enables safe schema testing",
+      "Fork-based development provides clean separation",
+      "Early TypeScript error resolution prevents blocking issues",
+      "Comprehensive testing reduces deployment failures"
+    ]
+  },
+
+  "current_development_status": {
+    "project_phase": "active-development",
+    "completion_estimate": "60% complete (estimate as of 2025-09-02)",
+    "priority_areas": [
+      "Complete Neon database integration",
+      "Implement SOW import functionality", 
+      "Build contractor management system",
+      "Develop pole tracking interface",
+      "Create mobile-responsive field interface"
+    ],
+    "immediate_next_steps": [
+      "Verify development environment setup",
+      "Test Neon development database connection",
+      "Update git remotes to point to development fork",
+      "Run comprehensive test suite to establish baseline",
+      "Begin SOW import feature development"
+    ]
+  },
+
+  "environment_commands": {
+    "setup_development_environment": [
+      "git remote set-url origin https://github.com/VeloF2025/FF_React_Neon_Hein_20250902.git",
+      "git remote add upstream https://github.com/VelocityFibre/FF_React_Neon.git",
+      "npm install",
+      "npm run type-check",
+      "npm run lint",
+      "npm run test"
+    ],
+    "database_setup": [
+      "Verify .env.local has development database connection",
+      "Test database connection with 'npm run db:test'",
+      "Run migrations if needed with 'npm run db:migrate'",
+      "Seed development data with 'npm run db:seed'"
+    ],
+    "quality_validation": [
+      "npm run type-check (must pass with 0 errors)",
+      "npm run lint (must pass with 0 errors/warnings)",
+      "npm run test -- --coverage (must achieve 95%+ coverage)",
+      "npm run test:e2e (Playwright tests must pass)",
+      "npm run build (must build successfully)"
+    ]
+  },
+
+  "archon_integration_commands": {
+    "task_management": [
+      "List all tasks: archon:manage_task(action='list', project_id='ff-react-neon')",
+      "Create task: archon:manage_task(action='create', project_id='ff-react-neon', title='Task Name')",
+      "Update task: archon:manage_task(action='update', task_id='task_id', update_fields={'status': 'done'})"
+    ],
+    "knowledge_queries": [
+      "Search patterns: archon:perform_rag_query(query='implementation pattern', match_count=5)",
+      "Find examples: archon:search_code_examples(query='component pattern', match_count=3)",
+      "Project knowledge: archon:perform_rag_query(query='VelocityFibre React patterns')"
+    ]
+  }
+}

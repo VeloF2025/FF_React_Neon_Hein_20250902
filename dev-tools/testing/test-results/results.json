@@ -1,11 +1,11 @@
 {
   "config": {
-    "configFile": "C:\\Jarvis\\AI Workspace\\FibreFlow_React\\playwright.config.ts",
-    "rootDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/tests/e2e",
+    "configFile": "C:\\Jarvis\\AI Workspace\\FF_React_Neon\\playwright.config.ts",
+    "rootDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/tests/e2e",
     "forbidOnly": false,
     "fullyParallel": true,
-    "globalSetup": "C:\\Jarvis\\AI Workspace\\FibreFlow_React\\dev-tools\\testing\\tests\\global-setup.ts",
-    "globalTeardown": "C:\\Jarvis\\AI Workspace\\FibreFlow_React\\dev-tools\\testing\\tests\\global-teardown.ts",
+    "globalSetup": "C:\\Jarvis\\AI Workspace\\FF_React_Neon\\dev-tools\\testing\\tests\\global-setup.ts",
+    "globalTeardown": "C:\\Jarvis\\AI Workspace\\FF_React_Neon\\dev-tools\\testing\\tests\\global-teardown.ts",
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
@@ -39,7 +39,7 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/test-results",
+        "outputDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -47,15 +47,15 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/tests/e2e",
+        "testDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/tests/e2e",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 60000
+        "timeout": 20000
       },
       {
-        "outputDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/test-results",
+        "outputDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -63,15 +63,15 @@
         },
         "id": "firefox",
         "name": "firefox",
-        "testDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/tests/e2e",
+        "testDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/tests/e2e",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 60000
+        "timeout": 20000
       },
       {
-        "outputDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/test-results",
+        "outputDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -79,15 +79,15 @@
         },
         "id": "webkit",
         "name": "webkit",
-        "testDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/tests/e2e",
+        "testDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/tests/e2e",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 60000
+        "timeout": 20000
       },
       {
-        "outputDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/test-results",
+        "outputDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -95,15 +95,15 @@
         },
         "id": "Mobile Chrome",
         "name": "Mobile Chrome",
-        "testDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/tests/e2e",
+        "testDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/tests/e2e",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 60000
+        "timeout": 20000
       },
       {
-        "outputDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/test-results",
+        "outputDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -111,15 +111,15 @@
         },
         "id": "Mobile Safari",
         "name": "Mobile Safari",
-        "testDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/tests/e2e",
+        "testDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/tests/e2e",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 60000
+        "timeout": 20000
       },
       {
-        "outputDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/test-results",
+        "outputDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -127,12 +127,12 @@
         },
         "id": "Tablet",
         "name": "Tablet",
-        "testDir": "C:/Jarvis/AI Workspace/FibreFlow_React/dev-tools/testing/tests/e2e",
+        "testDir": "C:/Jarvis/AI Workspace/FF_React_Neon/dev-tools/testing/tests/e2e",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 60000
+        "timeout": 20000
       }
     ],
     "shard": null,
@@ -149,71 +149,141 @@
   },
   "suites": [
     {
-      "title": "quick-visual-comparison.spec.ts",
-      "file": "quick-visual-comparison.spec.ts",
+      "title": "project-crud-workflow.spec.ts",
+      "file": "project-crud-workflow.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "Quick Visual Comparison - Desktop",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Project CRUD Workflow",
+          "file": "project-crud-workflow.spec.ts",
+          "line": 24,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "Complete project CRUD lifecycle with data consistency verification",
+              "ok": false,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 8658,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "🔍 Navigating to Development Environment...\n"
-                    },
-                    {
-                      "text": "🔍 Navigating to Production Environment...\n"
-                    },
-                    {
-                      "text": "📸 Capturing Development Screenshot...\n"
-                    },
-                    {
-                      "text": "📸 Capturing Production Screenshot...\n"
-                    },
-                    {
-                      "text": "✅ Screenshots captured successfully\n"
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 21480,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Jarvis\\AI Workspace\\FF_React_Neon\\dev-tools\\testing\\tests\\e2e\\project-crud-workflow.spec.ts",
+                            "column": 24,
+                            "line": 122
+                          },
+                          "message": "Error: page.fill: Test timeout of 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"endDate\"]')\u001b[22m\n\u001b[2m    - locator resolved to <input readonly type=\"date\" name=\"endDate\" title=\"This is automatically calculated based on start date and duration\" class=\"w-full px-3 py-2 border border-gray-200 rounded-md bg-gray-50 cursor-not-allowed\"/>\u001b[22m\n\u001b[2m    - fill(\"2025-12-31\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not editable\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n  120 |         for (const selector of selectors) {\n  121 |           if (await page.locator(selector).count() > 0) {\n> 122 |             await page.fill(selector, testValue);\n      |                        ^\n  123 |             filledFields[fieldKey] = testValue;\n  124 |             console.log(`   ✅ Filled ${fieldKey}: ${testValue}`);\n  125 |             fieldFilled = true;\n    at C:\\Jarvis\\AI Workspace\\FF_React_Neon\\dev-tools\\testing\\tests\\e2e\\project-crud-workflow.spec.ts:122:24\n    at C:\\Jarvis\\AI Workspace\\FF_React_Neon\\dev-tools\\testing\\tests\\e2e\\project-crud-workflow.spec.ts:102:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🚀 Starting Complete Project CRUD Workflow Test\n"
+                        },
+                        {
+                          "text": "\u001b[33mNaN\u001b[39m\n"
+                        },
+                        {
+                          "text": "1. Looking for project creation option...\n"
+                        },
+                        {
+                          "text": "   ✅ Found direct navigation: button:has-text(\"New Project\")\n"
+                        },
+                        {
+                          "text": "2. Filling project creation form...\n"
+                        },
+                        {
+                          "text": "   ✅ Filled name: Fiber Network Expansion Test\n"
+                        },
+                        {
+                          "text": "   ✅ Filled description: Test project for CRUD verification\n"
+                        },
+                        {
+                          "text": "   ✅ Filled startDate: 2025-01-01\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to project creation page",
+                          "duration": 472
+                        },
+                        {
+                          "title": "Fill project creation form with test data",
+                          "duration": 16202,
+                          "error": {
+                            "message": "Error: page.fill: Test timeout of 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"endDate\"]')\u001b[22m\n\u001b[2m    - locator resolved to <input readonly type=\"date\" name=\"endDate\" title=\"This is automatically calculated based on start date and duration\" class=\"w-full px-3 py-2 border border-gray-200 rounded-md bg-gray-50 cursor-not-allowed\"/>\u001b[22m\n\u001b[2m    - fill(\"2025-12-31\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not editable\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                            "stack": "Error: page.fill: Test timeout of 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"endDate\"]')\u001b[22m\n\u001b[2m    - locator resolved to <input readonly type=\"date\" name=\"endDate\" title=\"This is automatically calculated based on start date and duration\" class=\"w-full px-3 py-2 border border-gray-200 rounded-md bg-gray-50 cursor-not-allowed\"/>\u001b[22m\n\u001b[2m    - fill(\"2025-12-31\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not editable\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at C:\\Jarvis\\AI Workspace\\FF_React_Neon\\dev-tools\\testing\\tests\\e2e\\project-crud-workflow.spec.ts:122:24\n    at C:\\Jarvis\\AI Workspace\\FF_React_Neon\\dev-tools\\testing\\tests\\e2e\\project-crud-workflow.spec.ts:102:5",
+                            "location": {
+                              "file": "C:\\Jarvis\\AI Workspace\\FF_React_Neon\\dev-tools\\testing\\tests\\e2e\\project-crud-workflow.spec.ts",
+                              "column": 24,
+                              "line": 122
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 120 |\u001b[39m         \u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m selector \u001b[36mof\u001b[39m selectors) {\n \u001b[90m 121 |\u001b[39m           \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(selector)\u001b[33m.\u001b[39mcount() \u001b[33m>\u001b[39m \u001b[35m0\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 122 |\u001b[39m             \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(selector\u001b[33m,\u001b[39m testValue)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 123 |\u001b[39m             filledFields[fieldKey] \u001b[33m=\u001b[39m testValue\u001b[33m;\u001b[39m\n \u001b[90m 124 |\u001b[39m             console\u001b[33m.\u001b[39mlog(\u001b[32m`   ✅ Filled ${fieldKey}: ${testValue}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 125 |\u001b[39m             fieldFilled \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2025-09-02T19:53:05.251Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Jarvis\\AI Workspace\\FF_React_Neon\\dev-tools\\testing\\test-results\\project-crud-workflow-Proj-8f10d-ta-consistency-verification-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Jarvis\\AI Workspace\\FF_React_Neon\\dev-tools\\testing\\test-results\\project-crud-workflow-Proj-8f10d-ta-consistency-verification-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Jarvis\\AI Workspace\\FF_React_Neon\\dev-tools\\testing\\test-results\\project-crud-workflow-Proj-8f10d-ta-consistency-verification-chromium\\error-context.md"
+                        }
+                      ]
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-27T08:06:24.265Z",
-                  "annotations": [],
-                  "attachments": []
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
+              "id": "981dd8bc816e5c122975-d7dd5acdb2c6e914e328",
+              "file": "project-crud-workflow.spec.ts",
+              "line": 44,
+              "column": 3
             }
-          ],
-          "id": "a4df1cb02e07db4ab62e-b1a7e81fe949d3452bb9",
-          "file": "quick-visual-comparison.spec.ts",
-          "line": 12,
-          "column": 1
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-08-27T08:06:21.466Z",
-    "duration": 12483.307,
-    "expected": 1,
+    "startTime": "2025-09-02T19:53:03.177Z",
+    "duration": 24300.858999999997,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

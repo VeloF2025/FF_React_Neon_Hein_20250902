@@ -2,7 +2,7 @@
  * Project Details Form Section
  */
 
-import { ProjectFormData, ProjectType, ProjectStatus, Priority } from '@/types/project.types';
+import { ProjectFormData, ProjectType, ProjectStatus, ProjectPriority } from '@/types/project.types';
 
 interface ProjectDetailsSectionProps {
   formData: ProjectFormData;
@@ -24,7 +24,7 @@ export function ProjectDetailsSection({ formData, onInputChange }: ProjectDetail
             <select
               value={formData.projectType}
               onChange={(e) => onInputChange('projectType', e.target.value as ProjectType)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900"
               required
             >
               {Object.values(ProjectType).map(type => (
@@ -41,11 +41,11 @@ export function ProjectDetailsSection({ formData, onInputChange }: ProjectDetail
             </label>
             <select
               value={formData.priority}
-              onChange={(e) => onInputChange('priority', e.target.value as Priority)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              onChange={(e) => onInputChange('priority', e.target.value as ProjectPriority)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900"
               required
             >
-              {Object.values(Priority).map(priority => (
+              {Object.values(ProjectPriority).map(priority => (
                 <option key={priority} value={priority}>
                   {priority.charAt(0).toUpperCase() + priority.slice(1)}
                 </option>
@@ -60,7 +60,7 @@ export function ProjectDetailsSection({ formData, onInputChange }: ProjectDetail
             <select
               value={formData.status}
               onChange={(e) => onInputChange('status', e.target.value as ProjectStatus)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900"
               required
             >
               {Object.values(ProjectStatus).map(status => (

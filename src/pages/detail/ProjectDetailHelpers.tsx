@@ -2,7 +2,7 @@
  * Project Detail Helper Functions and Constants
  */
 
-import { ProjectStatus, Priority, PhaseStatus } from '@/types/project.types';
+import { ProjectStatus, ProjectPriority, PhaseStatus } from '@/types/project.types';
 import { CheckCircle, PlayCircle, AlertCircle, Circle } from 'lucide-react';
 
 export const statusColors = {
@@ -14,10 +14,10 @@ export const statusColors = {
 };
 
 export const priorityColors = {
-  [Priority.LOW]: 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-300',
-  [Priority.MEDIUM]: 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-300',
-  [Priority.HIGH]: 'bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-300',
-  [Priority.CRITICAL]: 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-300',
+  [ProjectPriority.LOW]: 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-300',
+  [ProjectPriority.MEDIUM]: 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-300',
+  [ProjectPriority.HIGH]: 'bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-300',
+  [ProjectPriority.CRITICAL]: 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-300',
 };
 
 export const getPhaseStatusIcon = (status: PhaseStatus) => {

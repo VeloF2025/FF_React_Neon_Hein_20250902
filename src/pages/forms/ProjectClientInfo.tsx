@@ -18,6 +18,11 @@ export function ProjectClientInfo({
   clients, 
   isClientsLoading 
 }: ProjectClientInfoProps) {
+  // Debug logging
+  console.log('🎯 ProjectClientInfo - clients:', clients);
+  console.log('🎯 ProjectClientInfo - isClientsLoading:', isClientsLoading);
+  console.log('🎯 ProjectClientInfo - clients length:', clients?.length);
+  
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200">
       <div className="p-6 border-b border-gray-200">
@@ -30,18 +35,23 @@ export function ProjectClientInfo({
               Client Organization *
             </label>
             <select
-              value={formData.clientId}
+              value={formData.clientId || ''}
               onChange={(e) => onInputChange('clientId', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 disabled:bg-gray-50 disabled:text-gray-500 force-dark-text"
+              style={{ 
+                color: '#000000', 
+                backgroundColor: '#ffffff',
+                '--tw-text-opacity': '1' 
+              } as React.CSSProperties}
               required
               disabled={isClientsLoading}
             >
-              <option value="">
+              <option value="" style={{ color: '#000000', backgroundColor: '#ffffff' }}>
                 {isClientsLoading ? 'Loading clients...' : 'Select a client'}
               </option>
               {clients.map((client) => (
-                <option key={client.id} value={client.id}>
-                  {client.name} ({client.contactPerson})
+                <option key={client.id} value={client.id} style={{ color: '#000000', backgroundColor: '#ffffff' }}>
+                  {client.name}
                 </option>
               ))}
             </select>

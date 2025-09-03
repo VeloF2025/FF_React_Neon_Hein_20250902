@@ -216,18 +216,22 @@ export function useClientFilters() {
 export function useClientSelection() {
   const { data: activeClients = [], isLoading } = useActiveClients();
   
-  // Convert Client[] to ClientDropdownOption[] by filtering out clients without ids
+  console.log('🔍 useClientSelection - activeClients:', activeClients, 'isLoading:', isLoading);
+  
+  // Convert Client[] to ClientDropdownOption[] by mapping the actual API response format
   const dropdownOptions: ClientDropdownOption[] = activeClients
-    .filter((client): client is typeof client & { id: string } => !!client.id)
-    .map(client => ({
+    .filter((client): client is any => !!client.id)
+    .map((client: any) => ({
       id: client.id,
-      name: client.name,
-      contactPerson: client.contactPerson,
-      email: client.email,
-      phone: client.phone,
-      status: client.status,
-      category: client.category
+      name: client.name || client.companyName || client.company_name || '', // Handle multiple field names
+      contactPerson: client.contactPerson || client.contact_person || '',
+      email: client.email || '',
+      phone: client.phone || '',
+      status: client.status || 'ACTIVE',
+      category: client.category || client.client_type || 'SME'
     }));
+  
+  console.log('✅ useClientSelection - final dropdownOptions:', dropdownOptions);
   
   const getClientById = (id: string): ClientDropdownOption | undefined => {
     return dropdownOptions.find(client => client.id === id);

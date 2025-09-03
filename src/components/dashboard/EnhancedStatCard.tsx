@@ -61,12 +61,12 @@ const EnhancedStatCardComponent = ({
     }
   }, [onClick, route, navigate, error]);
 
-  // 🟢 WORKING: Format display value
-  const displayValue = formatValue 
+  // 🟢 WORKING: Format display value with null/undefined protection
+  const displayValue = formatValue && value !== null && value !== undefined
     ? formatValue(value) 
-    : typeof value === 'number' 
+    : typeof value === 'number' && value !== null && value !== undefined
       ? value.toLocaleString() 
-      : value;
+      : (value ?? 'N/A');
 
   // 🟢 WORKING: Get trend icon and color
   const getTrendIcon = () => {
@@ -217,7 +217,10 @@ const EnhancedStatCardComponent = ({
                 <div className="flex items-center space-x-1">
                   {getTrendIcon()}
                   <span className={cn('text-sm font-medium', getTrendTextColor())}>
-                    {trend.percentage > 0 ? '+' : ''}{trend.percentage.toFixed(1)}%
+                    {typeof trend.percentage === 'number' 
+                      ? `${trend.percentage > 0 ? '+' : ''}${trend.percentage.toFixed(1)}%`
+                      : 'N/A'
+                    }
                     {trend.label && ` ${trend.label}`}
                   </span>
                 </div>
@@ -236,7 +239,10 @@ const EnhancedStatCardComponent = ({
             <div className="flex items-center space-x-1">
               {getTrendIcon()}
               <span className={cn('text-xs font-medium', getTrendTextColor())}>
-                {trend.percentage > 0 ? '+' : ''}{trend.percentage.toFixed(1)}%
+                {typeof trend.percentage === 'number' 
+                  ? `${trend.percentage > 0 ? '+' : ''}${trend.percentage.toFixed(1)}%`
+                  : 'N/A'
+                }
               </span>
             </div>
           )}

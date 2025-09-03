@@ -24,7 +24,7 @@ export function FinancialSection({ formData, handleInputChange }: SectionProps) 
           <select
             value={formData.paymentTerms}
             onChange={(e) => handleInputChange('paymentTerms', e.target.value as PaymentTerms)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
           >
             {Object.values(PaymentTerms).map(term => (
               <option key={term} value={term}>
@@ -41,7 +41,7 @@ export function FinancialSection({ formData, handleInputChange }: SectionProps) 
           <select
             value={formData.creditRating}
             onChange={(e) => handleInputChange('creditRating', e.target.value as CreditRating)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
           >
             {Object.values(CreditRating).map(rating => (
               <option key={rating} value={rating}>

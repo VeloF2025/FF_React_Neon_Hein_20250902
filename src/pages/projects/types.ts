@@ -3,7 +3,7 @@
  * Type definitions for projects page components
  */
 
-import { Project, ProjectStatus, ProjectType, Priority } from '@/types/project.types';
+import { Project, ProjectStatus, ProjectType, ProjectPriority } from '@/types/project.types';
 import { LucideIcon } from 'lucide-react';
 
 export interface ProjectsPageProps {
@@ -14,7 +14,7 @@ export interface ProjectsPageProps {
 export interface ProjectFilter {
   status?: ProjectStatus[];
   projectType?: ProjectType[];
-  priority?: Priority[];
+  priority?: ProjectPriority[];
   clientId?: string[];
   dateRange?: {
     startDate?: Date;
@@ -75,9 +75,9 @@ export const statusColors: Record<ProjectStatus, string> = {
   [ProjectStatus.CANCELLED]: 'bg-red-100 text-red-800',
 };
 
-export const priorityColors: Record<Priority, string> = {
-  [Priority.LOW]: 'bg-gray-100 text-gray-800',
-  [Priority.MEDIUM]: 'bg-blue-100 text-blue-800',
-  [Priority.HIGH]: 'bg-orange-100 text-orange-800',
-  [Priority.CRITICAL]: 'bg-red-100 text-red-800',
+export const priorityColors: Record<ProjectPriority, string> = {
+  [ProjectPriority.LOW]: 'bg-gray-100 text-gray-800',
+  [ProjectPriority.MEDIUM]: 'bg-blue-100 text-blue-800',
+  [ProjectPriority.HIGH]: 'bg-orange-100 text-orange-800',
+  [ProjectPriority.CRITICAL]: 'bg-red-100 text-red-800',
 };

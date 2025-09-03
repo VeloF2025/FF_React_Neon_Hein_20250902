@@ -61,7 +61,7 @@ export function CompanyDetailsSection({ formData, handleInputChange }: SectionPr
           <select
             value={formData.status}
             onChange={(e) => handleInputChange('status', e.target.value as ClientStatus)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
           >
             {Object.values(ClientStatus).map(status => (
               <option key={status} value={status}>
@@ -78,7 +78,7 @@ export function CompanyDetailsSection({ formData, handleInputChange }: SectionPr
           <select
             value={formData.category}
             onChange={(e) => handleInputChange('category', e.target.value as ClientCategory)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
           >
             {Object.values(ClientCategory).map(category => (
               <option key={category} value={category}>
@@ -95,7 +95,7 @@ export function CompanyDetailsSection({ formData, handleInputChange }: SectionPr
           <select
             value={formData.priority}
             onChange={(e) => handleInputChange('priority', e.target.value as ClientPriority)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
           >
             {Object.values(ClientPriority).map(priority => (
               <option key={priority} value={priority}>

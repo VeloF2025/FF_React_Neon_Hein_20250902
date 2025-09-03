@@ -1,0 +1,279 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - navigation [ref=e6]:
+        - img "Logo" [ref=e11]
+        - generic [ref=e13]:
+          - generic [ref=e15]: DU
+          - generic [ref=e16]:
+            - generic [ref=e17]: Development User
+            - generic [ref=e18]: SUPER ADMIN
+        - generic [ref=e19]:
+          - generic [ref=e20]: MAIN
+          - generic [ref=e21]:
+            - link "Dashboard" [ref=e22] [cursor=pointer]:
+              - /url: /app/dashboard
+              - img [ref=e23] [cursor=pointer]
+              - generic [ref=e28] [cursor=pointer]: Dashboard
+            - link "Meetings" [ref=e29] [cursor=pointer]:
+              - /url: /app/meetings
+              - img [ref=e30] [cursor=pointer]
+              - generic [ref=e35] [cursor=pointer]: Meetings
+            - link "Action Items" [ref=e36] [cursor=pointer]:
+              - /url: /app/action-items
+              - img [ref=e37] [cursor=pointer]
+              - generic [ref=e40] [cursor=pointer]: Action Items
+        - generic [ref=e41]:
+          - generic [ref=e42]: PROJECT MANAGEMENT
+          - generic [ref=e43]:
+            - link "Projects" [ref=e44] [cursor=pointer]:
+              - /url: /app/projects
+              - img [ref=e45] [cursor=pointer]
+              - generic [ref=e47] [cursor=pointer]: Projects
+            - link "Pole Capture" [ref=e48] [cursor=pointer]:
+              - /url: /app/pole-capture
+              - img [ref=e49] [cursor=pointer]
+              - generic [ref=e52] [cursor=pointer]: Pole Capture
+            - link "Fiber Stringing" [ref=e53] [cursor=pointer]:
+              - /url: /app/fiber-stringing
+              - img [ref=e54] [cursor=pointer]
+              - generic [ref=e58] [cursor=pointer]: Fiber Stringing
+            - link "Drops Management" [ref=e59] [cursor=pointer]:
+              - /url: /app/drops
+              - img [ref=e60] [cursor=pointer]
+              - generic [ref=e63] [cursor=pointer]: Drops Management
+            - link "SOW Management" [ref=e64] [cursor=pointer]:
+              - /url: /app/sow-management
+              - img [ref=e65] [cursor=pointer]
+              - generic [ref=e68] [cursor=pointer]: SOW Management
+            - link "Home Installations" [ref=e69] [cursor=pointer]:
+              - /url: /app/installations
+              - img [ref=e70] [cursor=pointer]
+              - generic [ref=e73] [cursor=pointer]: Home Installations
+            - link "Task Management" [ref=e74] [cursor=pointer]:
+              - /url: /app/tasks
+              - img [ref=e75] [cursor=pointer]
+              - generic [ref=e78] [cursor=pointer]: Task Management
+            - link "Daily Progress" [ref=e79] [cursor=pointer]:
+              - /url: /app/daily-progress
+              - img [ref=e80] [cursor=pointer]
+              - generic [ref=e82] [cursor=pointer]: Daily Progress
+        - generic [ref=e83]:
+          - generic [ref=e84]: PEOPLE & MANAGEMENT
+          - generic [ref=e85]:
+            - link "Clients" [ref=e86] [cursor=pointer]:
+              - /url: /app/clients
+              - img [ref=e87] [cursor=pointer]
+              - generic [ref=e92] [cursor=pointer]: Clients
+            - link "Staff" [ref=e93] [cursor=pointer]:
+              - /url: /app/staff
+              - img [ref=e94] [cursor=pointer]
+              - generic [ref=e99] [cursor=pointer]: Staff
+        - generic [ref=e100]:
+          - generic [ref=e101]: PROCUREMENT
+          - generic [ref=e102]:
+            - link "Procurement Portal" [ref=e103] [cursor=pointer]:
+              - /url: /app/procurement
+              - img [ref=e104] [cursor=pointer]
+              - generic [ref=e108] [cursor=pointer]: Procurement Portal
+            - link "Suppliers Portal" [ref=e109] [cursor=pointer]:
+              - /url: /app/suppliers
+              - img [ref=e110] [cursor=pointer]
+              - generic [ref=e115] [cursor=pointer]: Suppliers Portal
+        - generic [ref=e116]:
+          - generic [ref=e117]: CONTRACTORS
+          - link "Contractors Portal" [ref=e119] [cursor=pointer]:
+            - /url: /app/contractors
+            - img [ref=e120] [cursor=pointer]
+            - generic [ref=e123] [cursor=pointer]: Contractors Portal
+        - generic [ref=e124]:
+          - generic [ref=e125]: ANALYTICS
+          - generic [ref=e126]:
+            - link "Analytics Dashboard" [ref=e127] [cursor=pointer]:
+              - /url: /app/analytics
+              - img [ref=e128] [cursor=pointer]
+              - generic [ref=e130] [cursor=pointer]: Analytics Dashboard
+            - link "Enhanced KPIs" [ref=e131] [cursor=pointer]:
+              - /url: /app/enhanced-kpis
+              - img [ref=e132] [cursor=pointer]
+              - generic [ref=e135] [cursor=pointer]: Enhanced KPIs
+            - link "KPI Dashboard" [ref=e136] [cursor=pointer]:
+              - /url: /app/kpi-dashboard
+              - img [ref=e137] [cursor=pointer]
+              - generic [ref=e139] [cursor=pointer]: KPI Dashboard
+            - link "Reports" [ref=e140] [cursor=pointer]:
+              - /url: /app/reports
+              - img [ref=e141] [cursor=pointer]
+              - generic [ref=e144] [cursor=pointer]: Reports
+        - generic [ref=e145]:
+          - generic [ref=e146]: COMMUNICATIONS
+          - generic [ref=e147]:
+            - link "Communications Portal" [ref=e148] [cursor=pointer]:
+              - /url: /app/communications
+              - img [ref=e149] [cursor=pointer]
+              - generic [ref=e151] [cursor=pointer]: Communications Portal
+            - link "Meetings" [ref=e152] [cursor=pointer]:
+              - /url: /app/meetings
+              - img [ref=e153] [cursor=pointer]
+              - generic [ref=e158] [cursor=pointer]: Meetings
+            - link "Action Items" [ref=e159] [cursor=pointer]:
+              - /url: /app/action-items
+              - img [ref=e160] [cursor=pointer]
+              - generic [ref=e163] [cursor=pointer]: Action Items
+        - generic [ref=e164]:
+          - generic [ref=e165]: FIELD OPERATIONS
+          - generic [ref=e166]:
+            - link "Field App Portal" [ref=e167] [cursor=pointer]:
+              - /url: /app/field
+              - img [ref=e168] [cursor=pointer]
+              - generic [ref=e170] [cursor=pointer]: Field App Portal
+            - link "OneMap Data Grid" [ref=e171] [cursor=pointer]:
+              - /url: /app/onemap
+              - img [ref=e172] [cursor=pointer]
+              - generic [ref=e175] [cursor=pointer]: OneMap Data Grid
+            - link "Nokia Equipment" [ref=e176] [cursor=pointer]:
+              - /url: /app/nokia-equipment
+              - img [ref=e177] [cursor=pointer]
+              - generic [ref=e179] [cursor=pointer]: Nokia Equipment
+        - generic [ref=e180]:
+          - generic [ref=e181]: SYSTEM
+          - link "Settings" [ref=e183] [cursor=pointer]:
+            - /url: /app/settings
+            - img [ref=e184] [cursor=pointer]
+            - generic [ref=e187] [cursor=pointer]: Settings
+      - button "Collapse" [ref=e189] [cursor=pointer]:
+        - img [ref=e190] [cursor=pointer]
+        - generic [ref=e192] [cursor=pointer]: Collapse
+  - generic [ref=e193]:
+    - banner [ref=e194]:
+      - generic [ref=e196]:
+        - generic [ref=e198]:
+          - navigation [ref=e199]:
+            - link "Home" [ref=e201] [cursor=pointer]:
+              - /url: /app/dashboard
+            - generic [ref=e202]:
+              - img [ref=e203]
+              - link "Projects" [ref=e205] [cursor=pointer]:
+                - /url: /app/projects
+            - generic [ref=e206]:
+              - img [ref=e207]
+              - generic [ref=e209]: Create
+          - heading "Create Project" [level=1] [ref=e210]
+        - generic [ref=e211]:
+          - generic [ref=e212]:
+            - textbox "Search projects, clients..." [ref=e213]
+            - img [ref=e214]
+          - 'button "Current theme: Light" [ref=e218] [cursor=pointer]':
+            - img [ref=e219] [cursor=pointer]
+          - button "Sync data" [ref=e225] [cursor=pointer]:
+            - img [ref=e226] [cursor=pointer]
+          - button "2" [ref=e232] [cursor=pointer]:
+            - img [ref=e233] [cursor=pointer]
+            - generic [ref=e236] [cursor=pointer]: "2"
+          - button "DU Development User SUPER ADMIN" [ref=e238] [cursor=pointer]:
+            - generic [ref=e240] [cursor=pointer]: DU
+            - generic [ref=e241] [cursor=pointer]:
+              - paragraph [ref=e242] [cursor=pointer]: Development User
+              - paragraph [ref=e243] [cursor=pointer]: SUPER ADMIN
+    - main [ref=e244]:
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - heading "Create New Project" [level=1] [ref=e248]
+          - generic [ref=e249]:
+            - generic [ref=e251]:
+              - img [ref=e253]
+              - generic [ref=e255]:
+                - paragraph [ref=e256]: Basic Information
+                - paragraph [ref=e257]: Project name, client, and timeline
+            - generic [ref=e260]:
+              - img [ref=e262]
+              - generic [ref=e265]:
+                - paragraph [ref=e266]: Project Details
+                - paragraph [ref=e267]: Location, budget, and team assignment
+            - generic [ref=e270]:
+              - img [ref=e272]
+              - generic [ref=e275]:
+                - paragraph [ref=e276]: Review & Create
+                - paragraph [ref=e277]: Review all information and create project
+        - generic [ref=e278]:
+          - generic [ref=e279]:
+            - generic [ref=e280]:
+              - generic [ref=e281]:
+                - generic [ref=e282]: Project Name *
+                - textbox "Enter project name" [ref=e283]: Fiber Network Expansion Test
+              - generic [ref=e284]:
+                - generic [ref=e285]: Description
+                - textbox "Brief description of the project" [ref=e286]: Test project for CRUD verification
+              - generic [ref=e287]:
+                - generic [ref=e288]: Client *
+                - combobox [ref=e289]:
+                  - option "Select a client" [selected]
+                  - option
+            - generic [ref=e290]:
+              - generic [ref=e291]: Project Location *
+              - generic [ref=e292]:
+                - generic [ref=e293]:
+                  - generic [ref=e294]:
+                    - generic [ref=e295]: GPS Coordinates *
+                    - button "Use Current Location" [ref=e296] [cursor=pointer]:
+                      - img [ref=e297] [cursor=pointer]
+                      - text: Use Current Location
+                  - generic [ref=e300]:
+                    - generic [ref=e301]: Paste GPS Coordinates (Any Format)
+                    - generic [ref=e302]:
+                      - textbox "e.g., -34.031085, 18.463559 or 33.9221° S, 18.4231° E" [ref=e303]
+                      - button "Parse" [disabled] [ref=e304]
+                    - paragraph [ref=e305]: "Supports: decimal (-34.031, 18.463), DMS (33°55'19\" S, 18°25'23\" E), and more"
+                  - generic [ref=e306]:
+                    - spinbutton [ref=e308]
+                    - spinbutton [ref=e310]
+                - generic [ref=e311]:
+                  - paragraph [ref=e312]: "Location details (auto-populated from GPS coordinates):"
+                  - generic [ref=e313]:
+                    - generic [ref=e314]:
+                      - generic [ref=e315]: City/Town
+                      - textbox "Will be auto-populated" [ref=e316]
+                    - generic [ref=e317]:
+                      - generic [ref=e318]: Municipal District
+                      - textbox "Will be auto-populated" [ref=e319]
+                  - generic [ref=e320]:
+                    - generic [ref=e321]: Province
+                    - textbox "Will be auto-populated" [ref=e322]
+            - generic [ref=e323]:
+              - generic [ref=e324]:
+                - generic [ref=e325]: Start Date *
+                - textbox [active] [ref=e326]: 2025-01-01
+              - generic [ref=e327]:
+                - generic [ref=e328]: Duration (Months) *
+                - spinbutton [ref=e329]
+              - generic [ref=e330]:
+                - generic [ref=e331]: Calculated End Date
+                - textbox "This is automatically calculated based on start date and duration" [ref=e332]
+                - paragraph [ref=e333]: Calculated from start date + duration
+          - generic [ref=e334]:
+            - button "Previous" [disabled] [ref=e335]:
+              - img [ref=e336]
+              - text: Previous
+            - generic [ref=e338]: Step 1 of 3
+            - button "Next" [ref=e339] [cursor=pointer]:
+              - text: Next
+              - img [ref=e340] [cursor=pointer]
+    - contentinfo [ref=e342]:
+      - generic [ref=e343]:
+        - generic [ref=e345]: © 2025 FibreFlow. All rights reserved.
+        - generic [ref=e346]:
+          - generic [ref=e349]: System Online
+          - generic [ref=e350]:
+            - img [ref=e351]
+            - generic [ref=e353]: Secure Connection
+          - generic [ref=e354]:
+            - img [ref=e355]
+            - generic [ref=e357]: React v18.3+
+        - generic [ref=e359]:
+          - generic [ref=e360]: Migrated to React with
+          - img [ref=e361]
+          - generic [ref=e363]: by VF Team
+```

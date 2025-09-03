@@ -4,7 +4,7 @@ import { ArrowLeft, Save, AlertCircle } from 'lucide-react';
 import { useProjectForm } from '@/hooks/useProjects';
 import { useClientSelection } from '@/hooks/useClients';
 import { useProjectManagerSelection } from '@/hooks/useStaff';
-import { ProjectFormData, ProjectStatus, ProjectType, Priority } from '@/types/project.types';
+import { ProjectFormData, ProjectStatus, ProjectType, ProjectPriority } from '@/types/project.types';
 import { SOWUploadWizard } from '@/components/sow/SOWUploadWizard';
 import { safeToISOString } from '@/utils/dateHelpers';
 
@@ -31,7 +31,7 @@ export function ProjectForm() {
     clientId: '',
     location: '',
     projectType: ProjectType.FIBRE,
-    priority: Priority.MEDIUM,
+    priority: ProjectPriority.MEDIUM,
     status: ProjectStatus.PLANNING,
     startDate: new Date().toISOString(),
     endDate: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString(), // 90 days from now
@@ -47,8 +47,8 @@ export function ProjectForm() {
   useEffect(() => {
     if (project) {
       setFormData({
-        code: project.code,
-        name: project.name,
+        code: project.code || '',
+        name: project.name || '',
         description: project.description || '',
         clientId: project.clientId || '',
         location: project.location || '',

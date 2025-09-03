@@ -79,4 +79,50 @@
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-500 dark:bg-gray-500;
   }
+
+  /* Force dropdown text visibility in VF theme */
+  .force-dark-text,
+  .force-dark-text option {
+    color: #111827 !important;
+    background-color: #ffffff !important;
+  }
+  
+  /* FORCE ALL SELECT ELEMENTS TO SHOW BLACK TEXT */
+  select,
+  select:focus,
+  select:active,
+  select:hover {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+  }
+  
+  select option,
+  select option:focus,
+  select option:active,
+  select option:hover,
+  select option:selected {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+  }
+  
+  /* Target all option elements globally */
+  option,
+  option:focus,
+  option:active,
+  option:hover,
+  option:selected {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+  }
+  
+  /* Nuclear option - target everything */
+  * select {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+  }
+  
+  * select option {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+  }
 }
